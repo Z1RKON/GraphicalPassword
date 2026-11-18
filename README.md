@@ -9,5 +9,5 @@ pip install -r requirements.txt
 python -m pytest
 ```
 
-Отчёты: `docs/Отчет 1.docx` … `docs/Отчет 15.docx`.
+Отчёты: `docs/Отчет 1.md` … `docs/Отчет 15.md`.
 Демо: `python demos/lab01.py`
