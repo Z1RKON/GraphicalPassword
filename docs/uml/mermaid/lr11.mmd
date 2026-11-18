@@ -1,0 +1,12 @@
+classDiagram
+    class HashStrategy {
+        <<Strategy>>
+    }
+    class Sha256Strategy
+    class PatternValidationTemplate {
+        <<TemplateMethod>>
+        +validate()
+    }
+    HashStrategy <|-- Sha256Strategy
+    class StrictLengthTemplate
+    PatternValidationTemplate <|-- StrictLengthTemplate

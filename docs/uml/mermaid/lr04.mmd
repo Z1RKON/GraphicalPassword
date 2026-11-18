@@ -1,0 +1,18 @@
+classDiagram
+    class GridComponent {
+        <<Component>>
+        +collect_points()
+    }
+    class DotLeaf
+    class PatternComposite {
+        +add(child)
+        +validate()
+    }
+    class ValidatorBase
+    class LoggingValidatorDecorator {
+        <<Decorator>>
+    }
+    GridComponent <|-- DotLeaf
+    GridComponent <|-- PatternComposite
+    PatternComposite o--> GridComponent
+    ValidatorBase <|-- LoggingValidatorDecorator

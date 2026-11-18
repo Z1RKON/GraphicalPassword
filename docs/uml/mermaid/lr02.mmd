@@ -1,0 +1,19 @@
+classDiagram
+    class ValidatorCreator {
+        <<abstract>>
+        +create_validator()* PatternValidator
+    }
+    class StrictValidatorCreator
+    class RelaxedValidatorCreator
+    class PatternValidator {
+        <<interface>>
+        +validate(points)
+    }
+    class PatternTemplate {
+        <<Prototype>>
+        +clone()
+    }
+    ValidatorCreator <|-- StrictValidatorCreator
+    ValidatorCreator <|-- RelaxedValidatorCreator
+    StrictValidatorCreator ..> PatternValidator
+    PatternTemplate ..> PatternTemplate : clone

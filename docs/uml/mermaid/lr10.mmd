@@ -1,0 +1,14 @@
+classDiagram
+    class PasswordSubject {
+        <<Observer>>
+        +attach()
+        +notify()
+    }
+    class LockScreenState {
+        <<State>>
+    }
+    class SetupState
+    class UnlockState
+    LockScreenState <|-- SetupState
+    LockScreenState <|-- UnlockState
+    PasswordSubject o--> PasswordObserver

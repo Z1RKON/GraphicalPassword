@@ -1,0 +1,20 @@
+classDiagram
+    class PatternView {
+        <<Abstraction>>
+        -renderer PatternRenderer
+        +show_validation()
+    }
+    class PatternRenderer {
+        <<interface>>
+        +draw()
+    }
+    class ConsoleRenderer
+    class JsonRenderer
+    class LegacyPatternAdapter {
+        <<Adapter>>
+        +validate_csv()
+    }
+    PatternRenderer <|.. ConsoleRenderer
+    PatternRenderer <|.. JsonRenderer
+    PatternView o--> PatternRenderer
+    LegacyPatternAdapter ..> LegacyPatternAPI

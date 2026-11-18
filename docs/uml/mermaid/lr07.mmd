@@ -1,0 +1,11 @@
+classDiagram
+    class PatternCommand {
+        <<interface>>
+        +execute()
+    }
+    class SetupPasswordCommand
+    class VerifyPasswordCommand
+    class GridIterator
+    class PatternPathIterator
+    PatternCommand <|.. SetupPasswordCommand
+    PatternCommand <|.. VerifyPasswordCommand

@@ -1,0 +1,14 @@
+classDiagram
+    class Handler {
+        <<Chain>>
+        +set_next()
+        +handle()
+    }
+    class EmptyHandler
+    class RangeHandler
+    class LengthHandler
+    Handler <|-- EmptyHandler
+    Handler <|-- RangeHandler
+    Handler <|-- LengthHandler
+    EmptyHandler --> RangeHandler
+    RangeHandler --> LengthHandler

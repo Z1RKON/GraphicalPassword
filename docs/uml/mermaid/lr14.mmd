@@ -1,0 +1,8 @@
+classDiagram
+    class PasswordRepository {
+        <<Repository>>
+        +load()
+        +save()
+    }
+    class JsonFilePasswordRepository
+    PasswordRepository <|.. JsonFilePasswordRepository

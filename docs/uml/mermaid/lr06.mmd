@@ -1,0 +1,9 @@
+classDiagram
+    class PasswordFacadeProxy {
+        <<Proxy>>
+        -facade
+        +unlock()
+        +setup()
+    }
+    class GraphicalPasswordFacade
+    PasswordFacadeProxy ..> GraphicalPasswordFacade : lazy load

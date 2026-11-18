@@ -1,0 +1,18 @@
+classDiagram
+    class GraphicalPasswordFacade {
+        <<Facade>>
+        +setup()
+        +unlock()
+        +describe_grid()
+    }
+    class DotFlyweightFactory {
+        <<Flyweight>>
+        +get_dot(index)
+    }
+    class DotGlyph {
+        <<immutable>>
+        +index
+        +label
+    }
+    GraphicalPasswordFacade ..> DotFlyweightFactory
+    DotFlyweightFactory o--> DotGlyph

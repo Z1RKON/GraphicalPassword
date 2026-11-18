@@ -1,0 +1,8 @@
+classDiagram
+    class PatternInputMediator {
+        <<Mediator>>
+    }
+    class PatternMemento {
+        <<Memento>>
+    }
+    PatternInputMediator ..> PatternMemento : save/restore

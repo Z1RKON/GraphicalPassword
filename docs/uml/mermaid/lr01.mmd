@@ -1,0 +1,21 @@
+classDiagram
+    class SecuritySettingsRegistry {
+        <<Singleton>>
+        -static _instance
+        +min_pattern_length
+        +grid_size
+    }
+    class PatternProfileBuilder {
+        <<Builder>>
+        +with_theme()
+        +with_min_length()
+        +with_storage()
+        +build() PatternProfile
+    }
+    class PatternProfile {
+        +theme
+        +min_length
+        +storage_path
+    }
+    PatternProfileBuilder ..> PatternProfile : creates
+    PatternProfileBuilder ..> SecuritySettingsRegistry : reads defaults
